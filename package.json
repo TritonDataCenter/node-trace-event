@@ -1,0 +1,24 @@
+{
+    "name": "event-tracer",
+    "description": "A library to create Trace Event logs for your node app.",
+    "version": "1.0.0",
+    "author": "Trent Mick <trentm@gmail.com> (http://trentm.com)",
+    "keywords": ["trace", "event", "viewer"],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/joyent/node-event-tracer.git"
+    },
+    "main": "./lib/event-tracer.js",
+    "dependencies": {
+        "assert-plus": "0.1.x"
+    },
+    "devDependencies": {
+        "tape": "*"
+    },
+    "engines": {
+        "node": ">=0.10"
+    },
+    "scripts": {
+        "test": "tape test/*.test.js"
+    }
+}
