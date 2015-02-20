@@ -6,8 +6,12 @@ JSSTYLE_FILES := $(shell find lib test -name "*.js")
 all $(TAPE):
 	npm install
 
+.PHONY: clean
+clean:
+	rm -rf examples/*.json examples/*.log
+
 .PHONY: distclean
-distclean:
+distclean: clean
 	rm -rf node_modules
 
 .PHONY: test
