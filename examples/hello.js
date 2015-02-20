@@ -1,5 +1,5 @@
 /*
- * A first example showing event-tracer usage.
+ * A first example showing trace-event usage.
  * We emit begin/end events for a single call to `doSomething()`.
  */
 
@@ -16,7 +16,7 @@
  * - See examples/object-mode.js for raw event objects.
  * - See examples/child.js for a larger example.
  */
-var evt = require('../lib/event-tracer').createEventTracer();
+var evt = require('../lib/trace-event').createTracer();
 evt.on('data', function (data) {
     console.log('EVENT: %j', data);
 });

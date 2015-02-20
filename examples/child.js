@@ -5,7 +5,7 @@
 
 var fs = require('fs');
 
-var EVT = require('../lib/event-tracer').createEventTracer();
+var EVT = require('../lib/trace-event').createTracer();
 EVT.pipe(process.stdout);
 
 

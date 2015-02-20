@@ -35,5 +35,8 @@ versioncheck:
 .PHONY: cutarelease
 cutarelease: versioncheck
 	[[ `git status | tail -n1` == "nothing to commit, working directory clean" ]]
-	./tools/cutarelease.py -p event-tracer -f package.json
+	./tools/cutarelease.py -p trace-event -f package.json
 
+.PHONY: git-hooks
+git-hooks:
+	[[ -e .git/hooks/pre-commit ]] || ln -s ../../tools/pre-commit.sh .git/hooks/pre-commit

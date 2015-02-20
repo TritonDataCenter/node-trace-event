@@ -12,7 +12,7 @@
 
 var fs = require('fs');
 
-var evt = require('../lib/event-tracer').createEventTracer();
+var evt = require('../lib/trace-event').createTracer();
 evt.pipe(fs.createWriteStream('events.log'));
 console.log('Streaming events to "events.log"')
 

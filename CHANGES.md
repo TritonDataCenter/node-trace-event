@@ -1,9 +1,8 @@
-# node-event-tracer changelog
+# node-trace-event changelog
 
-## 1.0.1 (not released)
+## 1.1.0 (not yet released)
 
-(nothing yet)
-
+Rename to 'trace-event', which is a much more accurate name.
 
 ## 1.0.0
 
