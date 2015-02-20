@@ -31,7 +31,7 @@ TODO: point to examples/
 TODO: `child` usage
 
 
-# Usage with Bunyan
+# Usage with Bunyan (a separate `trace`)
 
 TODO
 
@@ -61,6 +61,44 @@ server.get({path: '/ping', name: 'Ping'}, function (req, res, next) {
 TODO: show example using 'after' to auto do begin/end on endpoints
 TODO: show example output
 TODO: tool to convert to a format that trace-viewer wants
+
+
+# Usage with Bunyan (tracing methods *on* the bunyan logger)
+
+There is an alternative usage with Bunyan that adds a little sugar. This
+requires bunyan >=1.3.4. Note that 'bunyan' is not a dependency of this
+module (to avoid users of 'trace-event' that don't care about Bunyan having
+to install it), so you'll need to:
+
+    npm install bunyan
+
+The sugar is that the `.begin()`, `.end()`, et al methods are on the logger
+object.
+
+```javascript
+var trace_event = require('../lib/trace-event');
+
+var log = trace_event.createBunyanLogger({
+    name: 'sugar'
+});
+
+function doSomething(opts, cb) {
+    var log = opts.log.child({req_id: opts.id});
+    log.begin('doSomething');
+    setTimeout(function () {
+        // ...
+        log.end('doSomething');
+        cb();
+    }, Math.floor(Math.random() * 2000));
+}
+
+for (var i = 0; i < 5; i++) {
+    doSomething({log: log, id: String(i)}, function () {});
+}
+```
+
+See "examples/buny.js" for a more complete example.
+
 
 
 

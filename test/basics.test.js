@@ -12,5 +12,6 @@ var trace_event = require('../lib/trace-event');
 test('exports', function (t) {
     t.ok(trace_event.createTracer, 'createTracer');
     t.ok(trace_event.createBunyanTracer, 'createBunyanTracer');
+    t.ok(trace_event.createBunyanLogger, 'createBunyanLogger');
     t.end();
 });
