@@ -1,6 +1,6 @@
 # node-trace-event changelog
 
-## 1.2.0 (not yet released)
+## 1.2.0
 
 - Add `trace_event.createBunyanLogger()` usage for some sugar. See the
   README.md for details.
