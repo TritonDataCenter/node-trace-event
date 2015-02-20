@@ -3,7 +3,7 @@
     "description": "A library to create Trace Event logs for your node app.",
     "version": "1.0.0",
     "author": "Trent Mick <trentm@gmail.com> (http://trentm.com)",
-    "keywords": ["trace", "event", "viewer"],
+    "keywords": ["trace", "event", "trace-viewer", "google"],
     "repository": {
         "type": "git",
         "url": "git://github.com/joyent/node-event-tracer.git"
