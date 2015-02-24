@@ -100,14 +100,6 @@ for (var i = 0; i < 5; i++) {
 See "examples/buny.js" for a more complete example.
 
 
-
-
-# Longer Example
-
-TODO
-
-
-
 # Links
 
 - https://github.com/google/trace-viewer/wiki

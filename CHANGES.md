@@ -1,8 +1,8 @@
 # node-trace-event changelog
 
-## 1.2.1 (not yet released)
+## 1.3.0 (not yet released)
 
-(nothing yet)
+- Add `.child(<fields>)` option to `trace_event.createBunyanTracer()` object.
 
 
 ## 1.2.0
